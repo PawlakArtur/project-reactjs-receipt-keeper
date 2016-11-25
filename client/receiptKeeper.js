@@ -5,17 +5,21 @@ import Main from './components/Main';
 import ReceiptGrid from './components/ReceiptGrid';
 import SingleReceipt from './components/SingleReceipt';
 
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import store, { history } from './store';
 
 require("./styles/style.scss");
 
 const router = (
-    <Router history={browserHistory}>
-        <Route path="/" component={Main}>
-            <IndexRoute component={ReceiptGrid}></IndexRoute>
-            <Route path="/view/:receiptId" component={SingleReceipt}></Route>
-        </Route>
-    </Router>
+    <Provider store={store}>
+        <Router history={history}>
+            <Route path="/" component={Main}>
+                <IndexRoute component={ReceiptGrid}></IndexRoute>
+                <Route path="/view/:receiptId" component={SingleReceipt}></Route>
+            </Route>
+        </Router>
+    </Provider>
 );
 
 

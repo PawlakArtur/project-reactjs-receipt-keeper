@@ -7,3 +7,5 @@ const receipts = [
         "date": "03-11-2016"
     }
 ];
+
+export default receipts;
