@@ -13,7 +13,7 @@ export function removeReceipt(receiptId) {
 
 export function addItem(receiptId, name, amount, price) {
     return {
-        type: "ADD_ITEM",
+        type: 'ADD_ITEM',
         receiptId,
         name,
         amout,
@@ -23,7 +23,7 @@ export function addItem(receiptId, name, amount, price) {
 
 export function removeItem(receiptId, i) {
     return {
-        type: "REMOVE_ITEM",
+        type: 'REMOVE_ITEM',
         receiptId,
         i
     }
