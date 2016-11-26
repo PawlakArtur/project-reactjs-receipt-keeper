@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import Main from './components/Main';
+import App from './components/App';
 import ReceiptGrid from './components/ReceiptGrid';
 import SingleReceipt from './components/SingleReceipt';
 
@@ -14,7 +14,7 @@ require("./styles/style.scss");
 const router = (
     <Provider store={store}>
         <Router history={history}>
-            <Route path="/" component={Main}>
+            <Route path="/" component={App}>
                 <IndexRoute component={ReceiptGrid}></IndexRoute>
                 <Route path="/view/:receiptId" component={SingleReceipt}></Route>
             </Route>
