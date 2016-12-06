@@ -1,6 +1,14 @@
 function items(state = [], action) {
-    console.log(state, action);
-    return state;
+    switch(action.type) {
+        case 'ADD_ITEM' :
+            console.log("adding item");
+            break;
+        case 'REMOVE_ITEM':
+            console.log("removing item");
+            break;
+        default:
+            return state;
+    }
 }
 
 export default items;
