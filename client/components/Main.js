@@ -4,12 +4,12 @@ import { Link } from 'react-router';
 const Main = React.createClass({
     render() {
         return (
-            <div>
+            <main>
                 <h1>
                     <Link to="/">Receipt Keeper</Link>
                 </h1>
                 {React.cloneElement(this.props.children, this.props)}
-            </div>
+            </main>
         )
     }
 });

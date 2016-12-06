@@ -1,4 +1,55 @@
+$color-body: #FDFFFC;
+$color-main: #f9d423;
+$color-receipt: #fc913a;
+
 * {
-  background: #f1f1f1;
+  box-sizing: border-box;
+  margin: 0;
 }
+
+body {
+  background: $color-body;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  background: $color-main;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 1px 1px #6d6d6d;
+  h1 {
+    text-align: center;
+    a {
+      color: #000;
+      text-decoration: none;
+      &:visited, &:hover, &:active, &:link {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .receipts-grid {
+    .receipt {
+      display: inline-block;
+      width: 400px;
+      margin: 5px 10px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 1px 1px 1px 0 #000;
+      background: $color-receipt;
+      a {
+        color: #000;
+        text-decoration: none;
+        &:visited, &:hover, &:active, &:link {
+          color: #000;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+
 
