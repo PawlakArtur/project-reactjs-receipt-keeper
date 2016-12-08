@@ -10,7 +10,7 @@ const SingleReceipt = React.createClass({
         return (
             <div>
                 <ReceiptInformation i={i} receipt={receipt} {...this.props}/>
-                <Items receiptItems={receiptItems} />
+                <Items receiptItems={receiptItems}  {...this.props} i={i}/>
             </div>
         )
     }

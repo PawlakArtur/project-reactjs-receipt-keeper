@@ -16,7 +16,7 @@ export function addItem(receiptId, name, amount, price) {
         type: 'ADD_ITEM',
         receiptId,
         name,
-        amout,
+        amount,
         price
     }
 }
