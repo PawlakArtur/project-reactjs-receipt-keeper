@@ -3,7 +3,7 @@ import React from 'react';
 const Items = React.createClass({
     renderItem(item, i) {
         return (
-            <div key={i}>
+            <div className="item" key={i}>
                 <p>Name: {item.name}</p>
                 <p>Price: {item.price}</p>
                 <p>Amount: {item.amount}</p>
@@ -23,14 +23,16 @@ const Items = React.createClass({
     },
     render() {
         return (
-            <div>
-                {this.props.receiptItems.map(this.renderItem)}
+            <div className="item-list">
+                <p>Add new product:</p>
                 <form ref="itemForm" onSubmit={this.handleSubmit}>
                     <input type="text" ref="name" placeholder="name"/>
                     <input type="number" ref="price" placeholder="price"/>
                     <input type="number" ref="amount" placeholder="amount"/>
                     <input type="submit" hidden />
                 </form>
+                <p>List of products:</p>
+                {this.props.receiptItems.map(this.renderItem)}
             </div>
         )
     }

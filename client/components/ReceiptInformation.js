@@ -12,6 +12,7 @@ const ReceiptInformation = React.createClass({
                     <p>{receipt.date}</p>
                     <p>Number of purchases items {items[receipt.id] ? items[receipt.id].length : 0}</p>
                 </Link>
+                <button className="delete-receipt-button" onClick={this.props.removeReceipt.bind(null, this.props.i)}>&times;</button>
             </div>
         )
     }

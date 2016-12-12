@@ -1,13 +1,19 @@
-export function addReceipt() {
+export function addReceipt(id, title, shop, address, date, code) {
     return {
-        type: 'ADD_RECEIPT'
+        type: 'ADD_RECEIPT',
+        id,
+        title,
+        shop,
+        address,
+        date,
+        code
     }
 }
 
-export function removeReceipt(receiptId) {
+export function removeReceipt(i) {
     return {
         type: 'REMOVE_RECEIPT',
-        receiptId
+        i
     }
 }
 

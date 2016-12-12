@@ -1,18 +1,20 @@
 function receipts(state = [], action) {
+    console.log(action);
     switch(action.type) {
         case 'ADD_RECEIPT' :
-            console.log("adding receipt");
             return [...state, {
-                id: state.length,
-                title: "Zakupy w Biedronce",
-                shop: "Biedronka",
-                address: "Warszawa, ul. Marszałkowska",
-                date: "03-11-2016",
-                code: "kdnsaij432432"
+                id: action.id,
+                title: action.title,
+                shop: action.shop,
+                address: action.address,
+                date: action.date,
+                code: action.code
                 }];
         case 'REMOVE_RECEIPT':
-            console.log("removing receipt");
-            return state;
+            return [
+                ...state.slice(0, action.i),
+                ...state.slice(action.i + 1)
+            ];
         default:
             return state;
     }

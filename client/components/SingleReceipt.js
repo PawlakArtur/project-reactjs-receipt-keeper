@@ -8,7 +8,7 @@ const SingleReceipt = React.createClass({
         const receipt = this.props.receipts[i];
         const receiptItems = this.props.items[i] || [];
         return (
-            <div>
+            <div className="receipt-details">
                 <ReceiptInformation i={i} receipt={receipt} {...this.props}/>
                 <Items receiptItems={receiptItems}  {...this.props} i={i}/>
             </div>
