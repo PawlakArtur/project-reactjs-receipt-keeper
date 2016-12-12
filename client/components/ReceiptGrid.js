@@ -4,7 +4,7 @@ import ReceiptInformation from './ReceiptInformation';
 const ReceiptGrid = React.createClass({
     handleAddReceipt(e) {
         e.preventDefault();
-        const id = this.props.receipts.length;
+        const id = (this.props.receipts.length > 0) ? (this.props.receipts[this.props.receipts.length - 1].id + 1) : 0;
         const title = this.refs.title.value;
         const shop = this.refs.shop.value;
         const address = this.refs.address.value;
